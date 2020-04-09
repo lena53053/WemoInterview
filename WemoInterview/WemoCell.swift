@@ -60,6 +60,18 @@ class WemoCell:UITableViewCell{
         }
     }
     
+    var isDisabled:Bool = false{
+        didSet{
+            if isDisabled{
+                self.backgroundColor = UIColor.lightGray
+                self.isUserInteractionEnabled = false
+            }else{
+                self.backgroundColor = UIColor.white
+                self.isUserInteractionEnabled = true
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.subTitleLabel.isHidden = true

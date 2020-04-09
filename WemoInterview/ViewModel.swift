@@ -58,6 +58,7 @@ class ViewModel:NSObject{
     }
 
     func onDanger(){
+        self.isDanger = !self.isDanger
         self.viewText = "危險樣式"
     }
 

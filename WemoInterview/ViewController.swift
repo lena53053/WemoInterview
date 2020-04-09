@@ -21,8 +21,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableview.delegate = self
         self.tableview.dataSource = self
         
-        self.viewmodel.cellArrangements = [.Success, .Warning, .Danger, .Info]
-        
         let wemoCell = UINib(nibName: "WemoCell", bundle: nil)
         self.tableview.register(wemoCell, forCellReuseIdentifier: "wemoCell")
     }
@@ -41,18 +39,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0{
+            guard let cellArr = self.viewmodel.cellArrangements else{
+                return UITableViewCell()
+            }
+            
             if let cell = self.tableview.dequeueReusableCell(withIdentifier: "wemoCell") as? WemoCell{
-                cell.type = self.viewmodel.cellArrangements![indexPath.row]
+                cell.type = cellArr[indexPath.row]
+                cell.isDisabled = false
                 
-
                 if self.viewmodel.isDanger{
-                    if self.viewmodel.cellArrangements![indexPath.row] == .Danger{
-                        cell.isUserInteractionEnabled = true
-                    }else{
-                        cell.isUserInteractionEnabled = false
+                    if cellArr[indexPath.row] != .Danger{
+                        cell.isDisabled = true
                     }
-                }else{
-                    cell.isUserInteractionEnabled = true
                 }
                 
                 return cell
@@ -74,10 +72,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
             if let cell = self.tableview.cellForRow(at: indexPath) as? WemoCell{
                 cell.isSelectCell = !cell.isSelectCell
-                
-                if cellArr[indexPath.row] == .Danger{
-                    self.viewmodel.isDanger = !self.viewmodel.isDanger
-                }
             }
             
             if indexPath.row < cellArr.count{
