@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D736C2C243C7AB00042D052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D736C2B243C7AB00042D052 /* AppDelegate.swift */; };
 		0D736C2E243C7AB00042D052 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D736C2D243C7AB00042D052 /* SceneDelegate.swift */; };
 		0D736C30243C7AB00042D052 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D736C2F243C7AB00042D052 /* ViewController.swift */; };
 		0D736C33243C7AB00042D052 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D736C31243C7AB00042D052 /* Main.storyboard */; };
@@ -16,6 +15,10 @@
 		0D736C3B243C7AB10042D052 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D736C39243C7AB10042D052 /* LaunchScreen.storyboard */; };
 		0D736C46243C7AB10042D052 /* WemoInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D736C45243C7AB10042D052 /* WemoInterviewTests.swift */; };
 		0D736C51243C7AB10042D052 /* WemoInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D736C50243C7AB10042D052 /* WemoInterviewUITests.swift */; };
+		0D736C60243C7B520042D052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D736C5F243C7B520042D052 /* AppDelegate.swift */; };
+		0D736C62243C7B6B0042D052 /* WemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D736C61243C7B6B0042D052 /* WemoCell.swift */; };
+		0D736C64243C7D160042D052 /* WemoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D736C63243C7D160042D052 /* WemoCell.xib */; };
+		0D736C66243C7E5B0042D052 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D736C65243C7E5B0042D052 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		0D736C28243C7AB00042D052 /* WemoInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WemoInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D736C2B243C7AB00042D052 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D736C2D243C7AB00042D052 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0D736C2F243C7AB00042D052 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0D736C32243C7AB00042D052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		0D736C4C243C7AB10042D052 /* WemoInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WemoInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D736C50243C7AB10042D052 /* WemoInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WemoInterviewUITests.swift; sourceTree = "<group>"; };
 		0D736C52243C7AB10042D052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D736C5F243C7B520042D052 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0D736C61243C7B6B0042D052 /* WemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WemoCell.swift; sourceTree = "<group>"; };
+		0D736C63243C7D160042D052 /* WemoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WemoCell.xib; sourceTree = "<group>"; };
+		0D736C65243C7E5B0042D052 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,7 @@
 		0D736C2A243C7AB00042D052 /* WemoInterview */ = {
 			isa = PBXGroup;
 			children = (
-				0D736C2B243C7AB00042D052 /* AppDelegate.swift */,
+				0D736C5F243C7B520042D052 /* AppDelegate.swift */,
 				0D736C2D243C7AB00042D052 /* SceneDelegate.swift */,
 				0D736C2F243C7AB00042D052 /* ViewController.swift */,
 				0D736C31243C7AB00042D052 /* Main.storyboard */,
@@ -109,6 +115,9 @@
 				0D736C39243C7AB10042D052 /* LaunchScreen.storyboard */,
 				0D736C3C243C7AB10042D052 /* Info.plist */,
 				0D736C34243C7AB00042D052 /* WemoInterview.xcdatamodeld */,
+				0D736C61243C7B6B0042D052 /* WemoCell.swift */,
+				0D736C63243C7D160042D052 /* WemoCell.xib */,
+				0D736C65243C7E5B0042D052 /* ViewModel.swift */,
 			);
 			path = WemoInterview;
 			sourceTree = "<group>";
@@ -236,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D736C3B243C7AB10042D052 /* LaunchScreen.storyboard in Resources */,
+				0D736C64243C7D160042D052 /* WemoCell.xib in Resources */,
 				0D736C38243C7AB10042D052 /* Assets.xcassets in Resources */,
 				0D736C33243C7AB00042D052 /* Main.storyboard in Resources */,
 			);
@@ -262,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D736C60243C7B520042D052 /* AppDelegate.swift in Sources */,
 				0D736C30243C7AB00042D052 /* ViewController.swift in Sources */,
-				0D736C2C243C7AB00042D052 /* AppDelegate.swift in Sources */,
 				0D736C2E243C7AB00042D052 /* SceneDelegate.swift in Sources */,
+				0D736C62243C7B6B0042D052 /* WemoCell.swift in Sources */,
+				0D736C66243C7E5B0042D052 /* ViewModel.swift in Sources */,
 				0D736C36243C7AB00042D052 /* WemoInterview.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
